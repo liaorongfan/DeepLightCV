@@ -67,7 +67,8 @@ pip install light_cnns
 
 ```python
 import torch
-from light_cnns import resnet50_v1b
+from light_model import resnet50_v1b
+
 model = resnet50_v1b()
 model.eval()
 print(model)
@@ -93,9 +94,11 @@ MobileNetv1模型是Google针对移动端设备提出的一种轻量级的卷积
 ![](./figures/mbv1.jpg)
 
 #### Code
+
 ```python
 import torch
-from light_cnns import mbv1
+from light_model import mbv1
+
 model = mbv1()
 model.eval()
 print(model)
@@ -116,9 +119,11 @@ mobilenetv2 沿用特征复用结构（残差结构），首先进行Expansion�
 ![](./figures/mbv2.jpg)
 
 #### Code
+
 ```python
 import torch
-from light_cnns import mbv2
+from light_model import mbv2
+
 model = mbv2()
 model.eval()
 print(model)
@@ -147,12 +152,14 @@ Searching for MobileNetV3
 ![](./figures/mbv3_2.jpg)
 
 #### Code
+
 ```python
 import torch
-from light_cnns import mbv3_small
-#from light_cnns import mbv3_large
+from light_model import mbv3_small
+
+# from light_cnns import mbv3_large
 model_small = mbv3_small()
-#model_large = mbv3_large()
+# model_large = mbv3_large()
 model_small.eval()
 print(model_small)
 input = torch.randn(1, 3, 224, 224)
@@ -169,9 +176,11 @@ print(y.size())
 
 ![](./figures/mbnext.jpg)
 #### Code
+
 ```python
 import torch
-from light_cnns import mobilenext
+from light_model import mobilenext
+
 model = mobilenext()
 model.eval()
 print(model)
@@ -193,9 +202,11 @@ print(y.size())
 ![](./figures/shuffv1.jpg)
 
 #### Code
+
 ```python
 import torch
-from light_cnns import shufflenetv1
+from light_model import shufflenetv1
+
 model = shufflenetv1()
 model.eval()
 print(model)
@@ -211,9 +222,11 @@ print(y.size())
 ![](./figures/shuffv2.jpg)
 
 #### Code
+
 ```python
 import torch
-from light_cnns import shufflenetv2
+from light_model import shufflenetv2
+
 model = shufflenetv2()
 model.eval()
 print(model)
@@ -239,9 +252,11 @@ print(y.size())
 ![](./figures/adder.jpg)
 
 #### Code
+
 ```python
 import torch
-from light_cnns import resnet20
+from light_model import resnet20
+
 model = resnet20()
 model.eval()
 print(model)
@@ -259,9 +274,11 @@ print(y.size())
 ![](./figures/ghost.jpg)
 
 #### Code
+
 ```python
 import torch
-from light_cnns import ghostnet
+from light_model import ghostnet
+
 model = ghostnet()
 model.eval()
 print(model)
@@ -281,9 +298,11 @@ print(y.size())
 ![](./figures/canet.jpg)
 
 #### Code
+
 ```python
 import torch
-from light_cnns import mbv2_ca
+from light_model import mbv2_ca
+
 model = mbv2_ca()
 model.eval()
 print(model)
@@ -306,9 +325,11 @@ ECANet是一种即插即用的轻量级通道注意力模块，可显著提高CN
 
 
 - 代码实现
+
 ```python
 import torch
-from light_cnns import mbv2_eca
+from light_model import mbv2_eca
+
 model = mbv2_eca()
 model.eval()
 print(model)
@@ -335,9 +356,11 @@ ResNeSt 实际上是站在巨人们上的"集大成者"，特别借鉴了：Mult
 
 
 - 代码实现
+
 ```python
 import torch
-from light_cnns import resnest50_v1b
+from light_model import resnest50_v1b
+
 model = resnest50_v1b()
 model.eval()
 print(model)
@@ -359,9 +382,11 @@ shuffle attention主要在空间注意力（Spatial Attention）与通道注意�
 ![](./figures/sanet.jpg)
 
 - 代码实现
+
 ```python
 import torch
-from light_cnns import mbv2_sa
+from light_model import mbv2_sa
+
 model = mbv2_sa()
 model.eval()
 print(model)
@@ -387,7 +412,8 @@ print(y.size())
 
 ```python
 import torch
-from light_cnns import mbv2_triplet
+from light_model import mbv2_triplet
+
 model = mbv2_triplet()
 model.eval()
 print(model)
@@ -420,9 +446,11 @@ PP-LCNet: A Lightweight CPU Convolutional Neural Network
 ![](./figures/lcnet_3.jpg)
 
 #### 代码实现如下：
+
 ```python
 import torch
-from light_cnns import lcnet_baseline
+from light_model import lcnet_baseline
+
 model = lcnet_baseline()
 model.eval()
 print(model)
@@ -448,9 +476,11 @@ MobileViT: 一种更小，更快,高精度的轻量级Transformer端侧网络架
 ![](./figures/mbvit_net.jpg)
 
 代码实现如下：
+
 ```python
 import torch
-from light_cnns import mobilevit_s
+from light_model import mobilevit_s
+
 model = mobilevit_s()
 model.eval()
 print(model)
@@ -473,9 +503,11 @@ print(y.size())
 ![](./figures/googlenet.jpg)
 
 代码实现如下:
+
 ```python
 import torch
-from light_cnns import googlenet
+from light_model import googlenet
+
 model = googlenet()
 model.eval()
 print(model)
@@ -498,7 +530,8 @@ Inceptionv2针对InceptionV1改进的点主要有：
 
 ```python
 import torch
-from light_cnns import inception_v2
+from light_model import inception_v2
+
 model = inception_v2()
 model.eval()
 print(model)
@@ -521,7 +554,8 @@ Inception Net v3 整合了前面 Inception v2 的特点，除此之外，还包�
 
 ```python
 import torch
-from light_cnns import inception_v3
+from light_model import inception_v3
+
 model = inception_v3()
 model.eval()
 print(model)
@@ -539,7 +573,8 @@ print(y.size())
 
 ```python
 import torch
-from light_cnns import inception_v4
+from light_model import inception_v4
+
 model = inception_v4()
 model.eval()
 print(model)
@@ -562,9 +597,11 @@ print(y.size())
 即调节3x3的卷积的分支的数量与1x1的卷积的输出通道数的比例，可以实现一系列处于传统Inception模块和“极致的Inception”模块之间的状态。
 
 代码实现如下：
+
 ```python
 import torch
-from light_cnns import xception
+from light_model import xception
+
 model = xception()
 model.eval()
 print(model)
@@ -584,9 +621,11 @@ print(y.size())
 ![](./figures/ic_conv.jpg)
 
 代码实现如下：
+
 ```python
 import torch
-from light_cnns import ic_resnet50
+from light_model import ic_resnet50
+
 patter = './pattern_zoo/detection/ic_resnet50_k9.json'
 model = ic_resnet50(pattern_path=patter)
 model.eval()
@@ -617,9 +656,11 @@ ESPNet是用于语义分割的轻量级网络，主要提出一种高效空间�
 
 
 代码实现如下：
+
 ```python
 import torch
-from light_cnns import espnetv1
+from light_model import espnetv1
+
 model = espnetv1()
 model.eval()
 print(model)
@@ -645,9 +686,11 @@ ESPNetv2主要基于ESPNetv1进行了模型轻量化处理，主要包括：
 ![](./figures/espnetv2_2.jpg)
 
 代码实现如下：
+
 ```python
 import torch
-from light_cnns import espnetv2
+from light_model import espnetv2
+
 model = espnetv2()
 model.eval()
 print(model)

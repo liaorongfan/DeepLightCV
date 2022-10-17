@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from light_cnns.ShuffleNet.blocks.one_shot_NAS import Shufflenet, Shuffle_Xception
+from light_model.ShuffleNet.blocks.one_shot_NAS import Shufflenet, Shuffle_Xception
 
 
 class ShuffleNetV2_OneShot(nn.Module):
