@@ -1,0 +1,11 @@
+# from light_model.ResNet_D import *
+# from light_model.GhostNet import *
+# from light_model.AdderNet import *
+# from light_model.MobileNet import *
+# from light_model.ShuffleNet import *
+# from light_model.Attention import *
+# from light_model.mobile_real_time_network import *
+# from light_model.ESPNet import *
+# from light_model.Inception import *
+# from light_model.Transformer import *
+# from light_model.HRNet import *

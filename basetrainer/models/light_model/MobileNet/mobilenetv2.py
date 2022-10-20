@@ -6,7 +6,6 @@ __all__ = ['mbv2']
 
 
 def _make_divisible(v, divisor, min_value=None):
-    
     if min_value is None:
         min_value = divisor
     new_v = max(min_value, int(v + divisor / 2) // divisor * divisor)
@@ -78,11 +77,11 @@ class MobileNetV2(nn.Module):
         # setting of inverted residual blocks
         self.cfgs = [
             # t, c, n, s
-            [1,  16, 1, 1],
-            [6,  24, 2, 2],
-            [6,  32, 3, 2],
-            [6,  64, 4, 2],
-            [6,  96, 3, 1],
+            [1, 16, 1, 1],
+            [6, 24, 2, 2],
+            [6, 32, 3, 2],
+            [6, 64, 4, 2],
+            [6, 96, 3, 1],
             [6, 160, 3, 2],
             [6, 320, 1, 1],
         ]
@@ -128,6 +127,6 @@ class MobileNetV2(nn.Module):
                 m.weight.data.normal_(0, 0.01)
                 m.bias.data.zero_()
 
+
 def mbv2(**kwargs):
     return MobileNetV2(**kwargs)
-    
